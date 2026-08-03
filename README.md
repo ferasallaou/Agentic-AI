@@ -6,6 +6,7 @@ A small repo for testing agentic AI ideas with LangChain.
 
 - [langchain-single-agent](langchain-single-agent): a simple single-agent example. It uses LangChain, OpenRouter, and Tavily through LangChain’s built-in tool support.
 - [langchain-multi-agent](langchain-multi-agent): a small multi-agent research flow. It splits work across agents for search, scraping, writing, and critique, and uses manually created tools instead of relying on Tavily’s LangChain tool.
+- [langgraph-basic](langgraph-basic): a basic LangGraph example that demonstrates a graph-based workflow with LangGraph and OpenRouter.
 
 ## Quick start
 
@@ -19,6 +20,11 @@ A small repo for testing agentic AI ideas with LangChain.
   - `npm install`
   - `npm run dev`
 
+- LangGraph basic:
+  - `cd langgraph-basic`
+  - `npm install`
+  - `npm run dev`
+
 ## Notes
 
-Both projects need `AI_MODEL` and `TAVILY_API_KEY` set in their environment, and both run as small Express APIs.
+The single-agent and multi-agent projects use Tavily and run as small Express APIs. The LangGraph example focuses on graph-based orchestration and mainly needs `AI_MODEL` configured.
