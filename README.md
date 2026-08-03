@@ -1,58 +1,24 @@
-# Agentic-AI
+# Agentic AI
 
-A small, work-in-progress repository for exploring agentic AI patterns with LangChain and related tools.
+A small repo for testing agentic AI ideas with LangChain.
 
-## Current project
+## Projects
 
-### LangChain single agent
+- [langchain-single-agent](langchain-single-agent): a simple single-agent example. It uses LangChain, OpenRouter, and Tavily through LangChain’s built-in tool support.
+- [langchain-multi-agent](langchain-multi-agent): a small multi-agent research flow. It splits work across agents for search, scraping, writing, and critique, and uses manually created tools instead of relying on Tavily’s LangChain tool.
 
-The current example lives in [langchain-single-agent](langchain-single-agent) and demonstrates a simple ReAct-style agent powered by:
+## Quick start
 
-- LangChain
-- OpenRouter for the language model
-- Tavily for web search
-- Express for a lightweight API layer
+- Single agent:
+  - `cd langchain-single-agent`
+  - `npm install`
+  - `npm run dev`
 
-### What it does
+- Multi-agent:
+  - `cd langchain-multi-agent`
+  - `npm install`
+  - `npm run dev`
 
-The app exposes a basic HTTP service with:
+## Notes
 
-- GET / → health check endpoint
-- POST /search → accepts a JSON body with a query string and returns the agent's final answer
-
-### Main files
-
-- [langchain-single-agent/src/agent.ts](langchain-single-agent/src/agent.ts) defines the agent, prompt template, and available tools
-- [langchain-single-agent/src/index.ts](langchain-single-agent/src/index.ts) starts the Express server and wires the /search route
-
-### Environment variables
-
-Set these before running the project:
-
-- AI_MODEL
-- TAVILY_API_KEY
-- PORT (optional, defaults to 3000)
-
-### Run locally
-
-```bash
-cd langchain-single-agent
-npm install
-npm run dev
-```
-
-Then send a request like:
-
-```bash
-curl -X POST http://localhost:3000/search \
-  -H "Content-Type: application/json" \
-  -d '{"query":"What is the latest news about AI agents?"}'
-```
-
-## Roadmap
-
-This repository is still in progress. More projects will be added over time, including:
-
-- LangGraph-based examples
-- Multi-agent systems
-- More advanced tool-use and orchestration patterns
+Both projects need `AI_MODEL` and `TAVILY_API_KEY` set in their environment, and both run as small Express APIs.

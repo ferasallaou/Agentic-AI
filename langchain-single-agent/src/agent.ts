@@ -1,4 +1,3 @@
-import { PromptTemplate } from "@langchain/core/prompts";
 import { ChatOpenRouter } from "@langchain/openrouter";
 import { TavilySearch } from "@langchain/tavily";
 import { createAgent } from "langchain";
