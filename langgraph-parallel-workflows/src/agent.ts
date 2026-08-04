@@ -21,7 +21,7 @@ async function evaluateLanguage(state: GraphStateSchema) {
 async function evaluateAnalysis(state: GraphStateSchema) {
   const prompt = `Evaluate the depth of analysis of the following essay and provide a feedback and assign a score out of 10 \n ${state["essay"]}`;
   const output = await structuredLLM.invoke(prompt);
-  console.log([...state.individualScores, output.score]);
+
   return {
     analysisFeedback: output.feedback,
     individualScores: [...state.individualScores, output.score],
