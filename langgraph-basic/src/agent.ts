@@ -10,11 +10,13 @@ const graphState = new StateSchema({
   post: z.string(),
 });
 
+type GraphStateSchema = typeof graphState.State;
+
 const LLM = new ChatOpenRouter({
   model: process.env.AI_MODEL,
 });
 
-async function outLineAgent(graphState) {
+async function outLineAgent(graphState: GraphStateSchema) {
   const agent = createAgent({
     model: LLM,
   });
@@ -30,7 +32,7 @@ async function outLineAgent(graphState) {
   return { outline: result.messages.at(-1)?.content };
 }
 
-async function blogPostAgent(graphState) {
+async function blogPostAgent(graphState: GraphStateSchema) {
   const agent = createAgent({
     model: LLM,
   });
