@@ -9,6 +9,7 @@ A small repo for testing agentic AI ideas with LangChain.
 - [langgraph-basic](langgraph-basic): a basic LangGraph example that demonstrates a graph-based workflow with LangGraph and OpenRouter.
 - [langgraph-parallel-workflows](langgraph-parallel-workflows): a LangGraph example that runs multiple evaluation steps in parallel and combines their results.
 - [langgraph-conditional-workflows](langgraph-conditional-workflows): a LangGraph example that routes the workflow based on the detected sentiment of a review.
+- [langgraph-iteration-workflows](langgraph-iteration-workflows): a LangGraph example that iteratively improves a Facebook post until it meets the quality criteria.
 
 ## Quick start
 
@@ -34,6 +35,11 @@ A small repo for testing agentic AI ideas with LangChain.
 
 - Conditional workflows:
   - `cd langgraph-conditional-workflows`
+  - `npm install`
+  - `npm run dev`
+
+- Iteration workflows:
+  - `cd langgraph-iteration-workflows`
   - `npm install`
   - `npm run dev`
 
