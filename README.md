@@ -11,6 +11,7 @@ A small repo for testing agentic AI ideas with LangChain.
 - [langgraph-conditional-workflows](langgraph-conditional-workflows): a LangGraph example that routes the workflow based on the detected sentiment of a review.
 - [langgraph-iteration-workflows](langgraph-iteration-workflows): a LangGraph example that iteratively improves a Facebook post until it meets the quality criteria.
 - [langgraph-agentic-chatbot](langgraph-agentic-chatbot): a LangGraph chatbot that uses a checkpointer for memory, marking this repo’s first experience with stateful conversation memory.
+- [langgraph-agentic-db-chatbot](langgraph-agentic-db-chatbot): a LangGraph chatbot that connects to a database and uses stored context to answer questions more intelligently.
 
 ## Quick start
 
@@ -46,6 +47,11 @@ A small repo for testing agentic AI ideas with LangChain.
 
 - Agentic chatbot with memory:
   - `cd langgraph-agentic-chatbot`
+  - `npm install`
+  - `npm run dev`
+
+- Agentic DB chatbot:
+  - `cd langgraph-agentic-db-chatbot`
   - `npm install`
   - `npm run dev`
 
